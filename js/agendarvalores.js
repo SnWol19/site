@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
     $("#cadastrar").click(function(e){
     	e.preventDefault();
     	var tarefavalor = $("#tarefa").val();
@@ -37,7 +37,7 @@ $(document).ready(function(){
                 console.log(result.status);
                 if(result.status){
                     alert('xml gerado com sucesso!');
-                    window.location.href='http://127.0.0.1:8080/gtarefamb2/tabela.html';
+                    window.location.href='tabela.html';
                 } else{
                     alert('Os dados não foram cadastrados !');
                     //window.location.href='agendar.html';
