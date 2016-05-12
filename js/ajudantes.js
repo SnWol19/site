@@ -1,27 +1,27 @@
-$(document).on('pageinit', '#logar', function() {
-	$(document).on('click', '#enviar', function(){
-		//e.preventDefault();
+$(function() {
+	$('#enviar').click(function(e){
+		e.preventDefault();
 		var  usuariovalor = $('#usuario').val();
 		var senhavalor = $('#senha').val();
-		alert(usuariovalor);
-		alert(senhavalor);
+		console.log(usuariovalor);
+		console.log(senhavalor);
 		$.ajax({url: 'http://127.0.0.1:8080/gtarefamb2/login.php', 
 			data: {usuarios: usuariovalor, senhas: senhavalor},
-			type: 'post',
-			async: 'true',
+			type: 'POST',
 			dataType: 'json',
 			beforeSend: function() {
                   // This callback function will trigger before data is sent
-                  $.mobile.showPageLoadingMsg(true); // This will show ajax spinner
+                  //$.mobile.showPageLoadingMsg(true); // This will show ajax spinner
             },
             complete: function() {
                   // This callback function will trigger on data sent/received complete
-                  $.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
+                  //$.mobile.hidePageLoadingMsg(); // This will hide ajax spinner
             }, 
 		    success: function(result) {
 				//alert("Data: " + data);
 				if(result.status){
-					$.mobile.changePage("#agendarr");
+					console.log('Agendar Pagina');
+					$.mobile.changePage("agendar.html", {transition: "slideup", changeHash: false });
 					//correto
 				} else{
 					alert('Login invalido !');

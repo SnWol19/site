@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- version: 2.2 Cadastrar valores para agendar -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarefas Cadastradas</title>
+  <link rel="stylesheet" href="themes/newtheme.min.css" />
+  <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" type="text/css" href="jquery/jquery.mobile-1.4.5.min.css">
+  <script src="jquery/jquery-1.12.3.min.js"></script>
+  <script src="jquery/jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  $("#body").ready(function(){
+    $("#resultado").html("");
+    //var retorno_click = $(this).attr("id");
+
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1:8080/gtarefamb2/xml/arq.xml",
+      dataType: "xml",
+      success: function(data){
+        $(data).find("tarefas").each(function(){
+          var resultado;
+  
+          $(this).find("tarefa").each(function(){
+            resultado = '<strong>Tarefa: </strong>' + $(this).find("nome").text() + '<br />';
+            resultado = resultado + '<strong>Descrição: </strong>' + $(this).find("descricao").text() + '<br /><br />';
+  
+            $("#resultado").append(resultado);
+          });
+  
+        }); 
+      }
+    });
+  });
+  });
+  </script>
+</head>
+<body>
+   <div data-role="page">
+     <header data-role="header">
+     	<!-- aqui é o topo e vem a imagem 
+     	<img src=""> -->
+     	<h1>Tarefas Cadastradas</h1>
+     </header>
+     <nav data-role="navbar"> <!-- Menu -->
+     	<ul>
+     	  <li><a href="index.html" data-transition="slide">Home</a></li>
+     	  <li><a href="sobre.html" data-transition="slide">Sobre Nós</a></li>
+     	  <li><a href="logar.html" data-transition="slide">Agendar</a></li>
+     	</ul>
+     </nav>
+     <section data-role="content">
+     	<!-- Conteudo principal -->
+        <!-- div id="resultado"></div -->
+          <div id="resultado"></div>
+     </section>
+   	 <footer data-role="footer" data-position="fixed"> <!-- Rodapé -->
+   	 	<h3><a data-role="button" data-icon="back" data-rel="back">Voltar</a></h3>
+   	 </footer>
+   </div>
+</body>
+</html>

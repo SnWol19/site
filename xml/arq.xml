@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+
+<tarefas>
+
+<tarefa>
+
+<id>4</id>
+<nome>teste1</nome>
+<descricao>descricao</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>6</id>
+<nome>testeee</nome>
+<descricao>rtrteytyy</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>7</id>
+<nome>teste asus</nome>
+<descricao>zenfone</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>8</id>
+<nome>teste asus</nome>
+<descricao>zenfone</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>9</id>
+<nome>teste asus zenfone</nome>
+<descricao>teste 22</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>11</id>
+<nome>teste</nome>
+<descricao>teste com login</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>18</id>
+<nome>teste com login</nome>
+<descricao>teste exibindo que f</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>19</id>
+<nome>teste com login</nome>
+<descricao>teste exibindo que f</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>20</id>
+<nome>teste com login 3</nome>
+<descricao>teste cadastrando e</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>21</id>
+<nome>teste pelo asus</nome>
+<descricao>teste de cadastro pe</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>22</id>
+<nome>teste xml</nome>
+<descricao>teste gerar xml</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>23</id>
+<nome>xml asus</nome>
+<descricao>gerando xml no asus</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>24</id>
+<nome>xml 2 no asus</nome>
+<descricao>gerando xml no xdk</descricao>
+
+
+</tarefa>
+
+
+<tarefa>
+
+<id>25</id>
+<nome>novo</nome>
+<descricao>novo</descricao>
+
+
+</tarefa>
+
+
+</tarefas>

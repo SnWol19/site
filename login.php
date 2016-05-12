@@ -18,7 +18,7 @@ $conexao = mysqli_connect($bdserver, $bdusuario, $bdsenha, $bdbanco);
 $usuario = $_POST['usuarios'];
 $senha = $_POST['senhas'];
 
-  $verifica = mysqli_query($conexao, "SELECT * FROM usuarios WHERE login = '$usuario' AND senha = '$senha'");
+  $verifica = mysqli_query($conexao, "SELECT * FROM usuarios WHERE login = '" . mysqli_escape_string($conexao, $usuario) . "' AND senha = '" . mysqli_escape_string($conexao, $senha) . "'");
   
   if(mysqli_num_rows($verifica) == 1) {
      $output = array('status' => true);
